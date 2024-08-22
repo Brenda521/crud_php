@@ -1,0 +1,59 @@
+body {
+    background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(255, 0, 212, 0.5),
+      rgba(33, 32, 32, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(192, 9, 9, 0.5),
+      rgba(33, 32, 32, 0) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(17, 118, 180, 0.5),
+        rgba(33, 32, 32, 0) 70.71%
+      )
+      rgb(105, 104, 104);
+  border-radius: 50%;
+}
+
+.form-floating .form-control {
+    background-color: transparent; 
+    border: 2px solid black; 
+    color: black; 
+    max-width: 500px; /* Tamaño máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+.form-floating .form-control::placeholder {
+    color: black; 
+    font-size: 17px; /* Tamaño de fuente más pequeño */
+    padding: 10px; /* Espaciado interno del input */
+}
+
+.form-floating .form-floating-label {
+    color: black; 
+}
+
+.form-floating .form-control:focus {
+    box-shadow: none; 
+    outline: none; 
+}
+
+.record-list li {
+    font-size: 1.25rem; 
+    margin-bottom: 1rem; 
+    padding: 0.5rem; 
+    border-bottom: 1px solid #000000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; }
