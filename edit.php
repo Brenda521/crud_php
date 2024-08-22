@@ -3,7 +3,7 @@ $jsonAlcance = 'testAlcance.json';
 $dataAlcance = json_decode(file_get_contents($jsonAlcance), true) ?? [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
-    // Actualizar el registro existente
+
     $id = (int)$_POST['id'];
     foreach ($dataAlcance as &$item) {
         if ($item['id'] == $id) {

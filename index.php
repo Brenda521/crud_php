@@ -3,7 +3,6 @@
 $jsonAlcance = 'testAlcance.json';
 $dataAlcance = json_decode(file_get_contents($jsonAlcance), true) ?? [];
 
-// Obtener el ID máximo actual y asignar el siguiente ID
 $maxId = 0;
 foreach ($dataAlcance as $item) {
     if ($item['id'] > $maxId) {
@@ -24,15 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre'])) {
     $ocupacion = trim($_POST['ocupacion']);
     $estado_civil = trim($_POST['estado_civil']);
 
-    // Inicializar el array de errores
     $errors = [];
 
-    // Validar correo
     if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Correo electrónico no válido.';
     }
 
-    // Validar teléfono (debe ser un número de 10 dígitos)
     if (!preg_match('/^[0-9]{10}$/', $telefono)) {
         $errors[] = 'Número de teléfono no válido. Debe tener 10 dígitos.';
     }
